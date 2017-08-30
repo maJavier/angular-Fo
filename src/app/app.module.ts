@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 // componentes
 import { AppComponent } from './app.component';
@@ -9,7 +10,9 @@ import { PortafolioComponent } from './components/portafolio/portafolio.componen
 import { AboutComponent } from './components/about/about.component';
 import { ProductoComponent } from './components/producto/producto.component';
 //rutas
-import { app_routing } from './app.routes'
+import { app_routing } from './app.routes';
+//servicios
+import { InformacionService } from "./services/informacion.service";
 
 @NgModule({
   declarations: [
@@ -22,9 +25,12 @@ import { app_routing } from './app.routes'
   ],
   imports: [
     BrowserModule,
-    app_routing
+    app_routing,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    InformacionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

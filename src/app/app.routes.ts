@@ -7,10 +7,10 @@ import {
  } from "./components/index.paginas";
 
 const APP_ROUTES : Routes = [
-    { path: '', component: PortafolioComponent },
+    { path: 'home', component: PortafolioComponent },
     { path: 'about', component: AboutComponent },
     { path: 'producto', component: ProductoComponent },
-    { path: '**', pathMatch: 'full', redirectTo: ''}
+    { path: '**', pathMatch: 'full', redirectTo: 'home'}
     
 
 ];
