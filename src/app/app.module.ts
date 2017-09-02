@@ -13,6 +13,9 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { app_routing } from './app.routes';
 //servicios
 import { InformacionService } from "./services/informacion.service";
+import { ProductosService } from './services/productos.service';
+import { BuscarComponent } from './components/buscar/buscar.component'
+ 
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { InformacionService } from "./services/informacion.service";
     FooterComponent,
     PortafolioComponent,
     AboutComponent,
-    ProductoComponent
+    ProductoComponent,
+    BuscarComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import { InformacionService } from "./services/informacion.service";
     HttpModule
   ],
   providers: [
-    InformacionService
+    InformacionService,
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })
